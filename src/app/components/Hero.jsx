@@ -61,12 +61,90 @@ const productCategories = [
   },
 ];
 
+const faqItems = [
+  {
+    q: "What materials can your laser marking machines mark?",
+    a: "Our fiber laser and CO₂ laser marking machines permanently mark steel, aluminium, stainless steel, titanium, polymers, rubber, coated metals, and many more industrial materials — with high-contrast, durable results that survive polishing and post-processing.",
+  },
+  {
+    q: "Do you provide laser machine installation and operator training?",
+    a: "Yes — every laser machine purchase includes on-site installation, full commissioning, and hands-on operator training so your team is productive from day one, anywhere in India.",
+  },
+  {
+    q: "What warranty do your laser machines carry?",
+    a: "We offer a 1-year comprehensive warranty on all laser machines, with optional Annual Maintenance Contracts (AMC) and extended service contracts available up to 3 years.",
+  },
+  {
+    q: "Can laser machines be customised for my production line?",
+    a: "Absolutely. We offer custom laser machine configurations including field size, power output, conveyor integration, rotary attachments, and software API access — tailored to your specific production workflow.",
+  },
+  {
+    q: "What is the typical delivery timeline for a laser machine?",
+    a: "Standard laser machine models are dispatched within 7–10 working days. Custom-configured laser systems typically take 3–4 weeks depending on specifications.",
+  },
+  {
+    q: "Do you offer after-sales laser machine support across India?",
+    a: "Yes. We have a pan-India network of trained laser machine service engineers who provide prompt on-site support, preventive maintenance under AMC, and genuine spare parts supply across 28+ cities.",
+  },
+];
+
+function FAQItem({ q, a, isOpen, onToggle }) {
+  return (
+    <div className="border-b border-gray-200 first:border-t first:border-gray-200">
+      <button
+        onClick={onToggle}
+        aria-expanded={isOpen}
+        className="w-full flex items-center justify-between gap-4 py-5 text-left group"
+      >
+        <span
+          className="text-[15px] font-semibold transition-colors"
+          style={{ color: isOpen ? NAV : "#1f2937" }}
+        >
+          {q}
+        </span>
+        <span
+          className="flex-shrink-0 w-6 h-6 rounded-full border flex items-center justify-center transition-all duration-200"
+          style={{
+            background: isOpen ? NAV : "#f3f4f6",
+            borderColor: isOpen ? NAV : "#d1d5db",
+            transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+          }}
+          aria-hidden="true"
+        >
+          <svg
+            style={{ color: isOpen ? "#ffffff" : "#6b7280" }}
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          >
+            <line x1="6" y1="1" x2="6" y2="11" />
+            <line x1="1" y1="6" x2="11" y2="6" />
+          </svg>
+        </span>
+      </button>
+
+      <div
+        className="grid transition-all duration-300 ease-in-out"
+        style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+      >
+        <div className="overflow-hidden">
+          <p className="text-sm text-gray-600 leading-relaxed pb-5">{a}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Hero() {
   const images = ["/images/home.png", "/images/home2.png"];
 
   const [current, setCurrent] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
-
+  const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -546,52 +624,25 @@ export default function Hero() {
       </section>
 
       {/* ── FAQ ── */}
-   <section>
-  <div className="pt-14 text-center">
-    <h2 className="text-bold font-semibold text-[#003B7E] text-2xl tracking-wide">
-      FREQUENTLY ASKED QUESTIONS — LASER MACHINES
-    </h2>
-  </div>
-  <div className="max-w-6xl mx-auto px-6 py-10 space-y-4 rounded-lg text-[#003B7E]">
-    {[
-      {
-        q: "What materials can your laser marking machines mark?",
-        a: "Our fiber laser and CO₂ laser marking machines permanently mark steel, aluminium, stainless steel, titanium, polymers, rubber, coated metals, and many more industrial materials — with high-contrast, durable results that survive polishing and post-processing.",
-      },
-      {
-        q: "Do you provide laser machine installation and operator training?",
-        a: "Yes — every laser machine purchase includes on-site installation, full commissioning, and hands-on operator training so your team is productive from day one, anywhere in India.",
-      },
-      {
-        q: "What warranty do your laser machines carry?",
-        a: "We offer a 1-year comprehensive warranty on all laser machines, with optional Annual Maintenance Contracts (AMC) and extended service contracts available up to 3 years.",
-      },
-      {
-        q: "Can laser machines be customised for my production line?",
-        a: "Absolutely. We offer custom laser machine configurations including field size, power output, conveyor integration, rotary attachments, and software API access — tailored to your specific production workflow.",
-      },
-      {
-        q: "What is the typical delivery timeline for a laser machine?",
-        a: "Standard laser machine models are dispatched within 7–10 working days. Custom-configured laser systems typically take 3–4 weeks depending on specifications.",
-      },
-      {
-        q: "Do you offer after-sales laser machine support across India?",
-        a: "Yes. We have a pan-India network of trained laser machine service engineers who provide prompt on-site support, preventive maintenance under AMC, and genuine spare parts supply across 28+ cities.",
-      },
-    ].map((f, i) => (
-      <div key={i} className="bg-white rounded-lg shadow-md overflow-hidden p-5 border border-gray-100">
-        {/* Question */}
-        <h3 className="font-semibold text-[#003B7E] text-[15px] mb-2">
-          {f.q}
-        </h3>
-        {/* Answer */}
-        <p className="text-gray-700 text-[14px] leading-relaxed">
-          {f.a}
-        </p>
-      </div>
-    ))}
-  </div>
-</section>
+      <section className="py-14 px-6">
+        <div className="text-center mb-10">
+          <h2 className="font-semibold text-[#003B7E] text-2xl tracking-wide">
+            FREQUENTLY ASKED QUESTIONS — LASER MACHINES
+          </h2>
+        </div>
+        <div className="max-w-3xl mx-auto">
+          {faqItems.map((f, i) => (
+            <FAQItem
+              key={i}
+              q={f.q}
+              a={f.a}
+              isOpen={openFaq === i}
+              onToggle={() => setOpenFaq((prev) => (prev === i ? null : i))}
+            />
+          ))}
+        </div>
+      </section>
+
       {showPopup && <EnquiryPopup onClose={() => setShowPopup(false)} />}
     </main>
   );
