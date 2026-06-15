@@ -3,7 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 
-// ─── DATA ─────────────────────────────────────
+const metadata ={
+  title: "Laser Marking Machine - High-Precision Industrial Marking Solutions",
+  description: "Explore our range of laser marking machines including fiber, CO₂ and UV technologies for precise, permanent marking on metals, plastics and more. Ideal for industrial applications with high speed and durability.", 
+}
 
 const machineVariants = [
   {
@@ -63,39 +66,34 @@ const faqs = [
   {
     q: "How long is the warranty?",
     a: "We offer a standard 1-year warranty on all our laser marking machines.",
-  }
+  },
 ];
-
-// ─── MAIN COMPONENT ───────────────────────────
 
 export default function LaserPage() {
   const [active, setActive] = useState("fiber");
 
   return (
     <div className="font-sans text-slate-800">
-
       {/* VARIANTS */}
       <section className="py-[70px] px-[20px] bg-[#003B7E]">
         <div className="max-w-[1280px] mx-auto">
-
-          <h2 className="text-[30px] font-semibold text-slate-200 mb-[10px] text-center">
+          <h1 className="text-[30px] font-semibold text-slate-200 mb-[10px] text-center">
             Laser Marking Machine Types
-          </h2>
+          </h1>
 
           <p className="text-[15px] text-slate-200 text-center max-w-[720px] mx-auto mb-[40px] leading-[1.6]">
-            We offer Fiber, CO₂ and UV laser marking machines designed for different materials and industrial applications.
-            Each technology delivers precise, permanent marking with reliable performance.
+            We offer Fiber, CO₂ and UV laser marking machines designed for
+            different materials and industrial applications. Each technology
+            delivers precise, permanent marking with reliable performance.
           </p>
 
           <div className="grid gap-[24px] grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
-
             {machineVariants.map((m) => (
               <div
                 key={m.id}
                 className="border border-slate-200 p-[24px] rounded-[10px] bg-white cursor-pointer hover:shadow-md transition"
                 onClick={() => setActive(m.id)}
               >
-
                 <h3 className="text-[18px] font-semibold text-slate-800 mb-[6px]">
                   {m.label} Marking Machine
                 </h3>
@@ -107,10 +105,8 @@ export default function LaserPage() {
                 <p className="text-slate-500 text-[14px] leading-[1.6]">
                   {m.desc}
                 </p>
-
               </div>
             ))}
-
           </div>
         </div>
       </section>
@@ -118,7 +114,6 @@ export default function LaserPage() {
       {/* FIBER LASER SECTION */}
       <section className="py-[70px] px-[20px] bg-white">
         <div className="max-w-[1200px] mx-auto grid md:grid-cols-3 gap-[30px] items-center">
-
           {/* LEFT IMAGE */}
           <div className="md:col-span-1">
             <div className="h-[260px] bg-white rounded-[10px]">
@@ -132,20 +127,20 @@ export default function LaserPage() {
 
           {/* RIGHT CONTENT */}
           <div className="md:col-span-2">
-
             <h2 className="text-[26px] font-semibold mb-[10px] text-slate-800">
               Fiber Laser Marking Machine
             </h2>
 
             <p className="text-[14px] text-slate-600 leading-[1.6] mb-[10px]">
-              Ideal for marking metals like steel, aluminum, copper and alloys with high speed
-              and deep engraving capability.
+              Ideal for marking metals like steel, aluminum, copper and alloys
+              with high speed and deep engraving capability.
             </p>
 
             <p className="text-[14px] text-slate-500 leading-[1.6] mb-[15px]">
-              This fiber laser marking machine is widely used in industrial manufacturing
-              for permanent marking, serial numbers, QR codes and branding. It ensures
-              high precision, fast processing speed and long-term durability without consumables.
+              This fiber laser marking machine is widely used in industrial
+              manufacturing for permanent marking, serial numbers, QR codes and
+              branding. It ensures high precision, fast processing speed and
+              long-term durability without consumables.
             </p>
 
             <h3 className="text-[15px] font-semibold mb-[8px] text-slate-700">
@@ -163,32 +158,29 @@ export default function LaserPage() {
                 </div>
               ))}
             </div>
-
           </div>
-
         </div>
       </section>
 
       {/* CO2 DETAILS */}
       <section className="py-[70px] px-[20px] bg-white">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-[40px] items-center">
-
           {/* LEFT: CONTENT (takes 2 columns) */}
           <div className="md:col-span-2">
-
             <h2 className="text-[26px] font-semibold mb-[10px] text-slate-800">
               CO₂ Laser Marking Machine
             </h2>
 
             <p className="text-[14px] text-slate-600 leading-[1.7] mb-[12px]">
-              Perfect for non-metal materials such as wood, acrylic, leather, rubber,
-              and glass. It delivers smooth surface finishing with high precision and clarity.
+              Perfect for non-metal materials such as wood, acrylic, leather,
+              rubber, and glass. It delivers smooth surface finishing with high
+              precision and clarity.
             </p>
 
             <p className="text-[14px] text-slate-500 leading-[1.7] mb-[16px]">
               Designed for industries like packaging, handicrafts, and branding,
-              this machine ensures consistent marking quality with reliable performance
-              in continuous production environments.
+              this machine ensures consistent marking quality with reliable
+              performance in continuous production environments.
             </p>
 
             <h3 className="text-[15px] font-semibold mb-[10px] text-slate-700">
@@ -206,7 +198,6 @@ export default function LaserPage() {
                 </div>
               ))}
             </div>
-
           </div>
 
           {/* RIGHT: IMAGE (1 column) */}
@@ -219,14 +210,12 @@ export default function LaserPage() {
               />
             </div>
           </div>
-
         </div>
       </section>
 
       {/* UV LASER SECTION */}
       <section className="py-[70px] px-[20px] bg-white">
         <div className="max-w-[1100px] mx-auto grid md:grid-cols-3 gap-[30px] items-center">
-
           {/* IMAGE (LEFT) */}
           <div className="md:col-span-1">
             <div className="h-[260px] bg-white rounded-[10px]">
@@ -240,18 +229,19 @@ export default function LaserPage() {
 
           {/* CONTENT (RIGHT - spans 2 columns) */}
           <div className="md:col-span-2">
-
             <h2 className="text-[26px] font-semibold mb-[10px] text-slate-800">
               UV Laser Marking Machine
             </h2>
 
             <p className="text-[14px] text-slate-600 leading-[1.7] mb-[12px]">
-              Best for heat-sensitive materials like PCB, plastics, medical packaging and fine precision work.
+              Best for heat-sensitive materials like PCB, plastics, medical
+              packaging and fine precision work.
             </p>
 
             <p className="text-[14px] text-slate-500 leading-[1.7] mb-[18px]">
-              UV laser marking uses cold marking technology that prevents material damage,
-              making it ideal for delicate surfaces and high-precision industrial applications.
+              UV laser marking uses cold marking technology that prevents
+              material damage, making it ideal for delicate surfaces and
+              high-precision industrial applications.
             </p>
 
             <h3 className="text-[15px] font-semibold mb-[10px] text-slate-700">
@@ -269,7 +259,6 @@ export default function LaserPage() {
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </section>
@@ -280,16 +269,78 @@ export default function LaserPage() {
           <h2 className="text-[28px] mb-[20px]">Applications</h2>
 
           <div className="grid gap-[20px] grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
-            {["Automotive", "Electronics", "Jewellery", "Packaging"].map((a, i) => (
-              <div key={i} className="border border-slate-200 p-[20px] rounded-[8px]">
-                <h4>{a}</h4>
-                <p className="text-[13px] text-[#003B7E] font-bold">
-                  Industrial marking and traceability solutions.
+            {["Automotive", "Electronics", "Jewellery", "Packaging"].map(
+              (a, i) => (
+                <div
+                  key={i}
+                  className="border border-slate-200 p-[20px] rounded-[8px]"
+                >
+                  <h4>{a}</h4>
+                  <p className="text-[13px] text-[#003B7E] font-bold">
+                    Industrial marking and traceability solutions.
+                  </p>
+                </div>
+              ),
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section className="py-[60px] px-[20px] bg-[#f8f9fb]">
+        <div className="max-w-[1100px] mx-auto">
+          <h2 className="text-[26px] font-semibold text-slate-800 mb-[8px]">
+            Trusted Laser Marking Machine Manufacturer
+          </h2>
+          <p className="text-[14px] text-slate-500 leading-[1.7] mb-[36px] max-w-[680px]">
+            We design and manufacture industrial-grade laser marking machines
+            backed by years of engineering expertise, global service support,
+            and a commitment to zero-defect production quality.
+          </p>
+          <div className="grid gap-[20px] grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
+            {[
+              {
+                title: "10+ Years Experience",
+                desc: "Decade of laser technology expertise, serving 500+ industrial clients across 30+ countries.",
+              },
+              {
+                title: "After-Sales Support",
+                desc: "Dedicated technical team for installation, training, and ongoing maintenance assistance.",
+              },
+              {
+                title: "ISO Certified Quality",
+                desc: "All machines undergo strict quality control and are CE/ISO certified for international compliance.",
+              },
+              {
+                title: "Fast Delivery",
+                desc: "Stock machines ship within 7–15 days. Custom configurations available on request.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white border border-slate-200 rounded-[10px] p-[24px]"
+              >
+                <h4 className="text-[15px] font-semibold text-slate-800 mb-[6px]">
+                  {item.title}
+                </h4>
+                <p className="text-[13px] text-slate-500 leading-[1.6]">
+                  {item.desc}
                 </p>
               </div>
             ))}
           </div>
         </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-gray-200 text-black font-semibold text-center py-[60px] px-[20px]">
+        <h2>Need Help Choosing the Right Machine?</h2>
+        <Link
+          href="/contact-us"
+          className="inline-block mt-[20px] bg-white text-pink-600 px-[20px] py-[10px] rounded-[6px] no-underline"
+        >
+          Contact Us →
+        </Link>
       </section>
 
       {/* FAQ */}
@@ -304,17 +355,6 @@ export default function LaserPage() {
             </div>
           ))}
         </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-gray-200 text-black font-semibold text-center py-[60px] px-[20px]">
-        <h2>Need Help Choosing the Right Machine?</h2>
-        <Link
-          href="/contact-us"
-          className="inline-block mt-[20px] bg-white text-pink-600 px-[20px] py-[10px] rounded-[6px] no-underline"
-        >
-          Contact Us →
-        </Link>
       </section>
 
     </div>

@@ -26,7 +26,7 @@ export default function LaserWeldingPage() {
     },
     {
       name: "Laser Soldering Machine",
-      link: "/laser-machines/soldering",
+      link: "/laser-machines/laser-soldering-machine",
       image: "/laser-machines/laser-soldering-machine.webp",
     },
     {

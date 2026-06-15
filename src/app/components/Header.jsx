@@ -12,7 +12,7 @@ export default function Navbar() {
 
   const products = [
     { name: "Table Top Laser Marking Machine", link: "/laser-machines/laser-marking-machine" },
-    { name: "Laser Soldering Machine", link: "/laser-machines/Soldering" },
+    { name: "Laser Soldering Machine", link: "/laser-machines/laser-soldering-machine" },
     { name: "Laser Cutting Machine", link: "/laser-machines/cutting" },
     { name: "Metal Marking Laser Machine", link: "/laser-machines/Metal-marking" },
     { name: "Gold Testing Machine", link: "/laser-machines/Gold-testing" },
@@ -133,7 +133,7 @@ export default function Navbar() {
                       <Link href="/laser-machines/laser-marking-machine/uv-laser" className="block px-5 py-3 font-['Inter',sans-serif] text-sm font-medium text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">UV Laser</Link>
                     </div>
                   </div>
-                  <Link href="/laser-machines/soldering" className="block px-4 py-3 font-['Inter',sans-serif] text-sm font-medium normal-case text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Laser Soldering Machine</Link>
+                  <Link href="/laser-machines/laser-soldering-machine" className="block px-4 py-3 font-['Inter',sans-serif] text-sm font-medium normal-case text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Laser Soldering Machine</Link>
                   <Link href="/laser-machines/cutting" className="block px-4 py-3 font-['Inter',sans-serif] text-sm font-medium normal-case text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Laser Cutting Machine</Link>
                   <Link href="/laser-machines/welding" className="block px-4 py-3 font-['Inter',sans-serif] text-sm font-medium normal-case text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Laser Welding Machine</Link>
                 </div>
@@ -279,7 +279,7 @@ export default function Navbar() {
                 <Link href="/laser-machines/laser-marking-machine/co2-laser" className="block py-2.5 pl-12 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>CO2 Laser</Link>
                 <Link href="/laser-machines/laser-marking-machine/uv-laser" className="block py-2.5 pl-12 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>UV Laser</Link>
               </div>
-              <Link href="/laser-machines/Soldering" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Soldering Machine</Link>
+              <Link href="/laser-machines/laser-soldering-machine" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Soldering Machine</Link>
               <Link href="/laser-machines/cutting" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Cutting Machine</Link>
               <Link href="/laser-machines/welding" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Welding Machine</Link>
             </div>
