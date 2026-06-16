@@ -13,17 +13,17 @@ export default function LaserCuttingPage() {
   const machines = [
     {
       name: "Fiber Laser Marking Machine",
-      link: "/laser-machines/laser-marking-machine/fiber-laser",
+      link: "/laser-machines/laser-marking-machine/fiber-laser-marking-machine",
       image: "/laser-machines/fiber-laser-machine.webp",
     },
     {
       name: "CO2 Laser Marking Machine",
-      link: "/laser-machines/laser-marking-machine/co2-laser",
+      link: "/laser-machines/laser-marking-machine/co2-laser-marking-machine",
       image: "/laser-machines/co2-laser-marking.webp",
     },
     {
       name: "UV Laser Marking Machine",
-      link: "/laser-machines/laser-marking-machine/uv-laser",
+      link: "/laser-machines/laser-marking-machine/uv-laser-marking-machine",
       image: "/laser-machines/uv-marking-machine.webp",
     },
     {
@@ -33,7 +33,7 @@ export default function LaserCuttingPage() {
     },
     {
       name: "Laser Cutting Machine",
-      link: "/laser-machines/cutting",
+      link: "/laser-machines/laser-cutting-machine",
       image: "/laser-machines/laser-cutter-machine.webp",
       active: true,
     },

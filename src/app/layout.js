@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 export const metadata = {
   title: "India Laser - High-Quality Laser Machines and Testing Equipment",
   description:
-    "Discover top-notch laser machines and testing equipment at India Laser. We offer a wide range of products including fiber lasers, CO2 lasers, UV lasers, welding machines, and gold testing equipment. Our solutions are designed to meet the needs of various industries with precision and reliability.",
+    "Discover top-notch laser machines and testing equipment at India Laser. We offer a wide range of products including fiber lasers, CO2 lasers, UV lasers,  machines, and gold testing equipment. Our solutions are designed to meet the needs of various industries with precision and reliability.",
 };
 
 export default function RootLayout({ children }) {

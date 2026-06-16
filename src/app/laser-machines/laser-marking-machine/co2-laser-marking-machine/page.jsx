@@ -1,82 +1,81 @@
+
 import Image from "next/image";
 import Link from "next/link";
-export const metadata = {
-  title: "UV Laser Marking Machine - High-Precision Laser Marking Solutions in India",
-  description: "Discover our advanced UV Laser Marking Machine for ultra-precise marking on glass, plastics, PCBs, and heat-sensitive materials. Ideal for electronics, medical devices, and delicate substrates. Get high-quality, permanent marks with minimal heat effect. Contact us for pricing and demo in India.",
+export const metadata = { title: "CO2 Laser Marking Machine - High-Quality Non-Metal Engraving Solutions in India",   
+  description: "Discover our high-performance CO2 Laser Marking Machine for precise engraving and cutting on wood, acrylic, leather, and non-metal materials. Ideal for packaging, handicrafts, signage, and textile industries across India. Get reliable and cost-effective laser marking solutions with IndiaLaser.",
 };
 
-export default function UVLaserPage() {
-
+export default function CO2LaserPage() {
+  
 
   const machines = [
     {
       name: "Fiber Laser Marking Machine",
-      link: "/laser-machines/laser-marking-machine/fiber-laser",
+      link: "/laser-machines/laser-marking-machine/fiber-laser-marking-machine",
       image: "/laser-machines/fiber-laser-machine.webp",
     },
     {
       name: "CO2 Laser Marking Machine",
-      link: "/laser-machines/laser-marking-machine/co2-laser",
+      link: "/laser-machines/laser-marking-machine/co2-laser-marking-machine",
       image: "/laser-machines/co2-laser-marking.webp",
+      active: true,
     },
     {
       name: "UV Laser Marking Machine",
-      link: "/laser-machines/laser-marking-machine/uv-laser",
+      link: "/laser-machines/laser-marking-machine/uv-laser-marking-machine",
       image: "/laser-machines/uv-marking-machine.webp",
-      active: true,
     },
   ];
 
   const specs = [
-    { param: "Laser Source", value: "Solid-State DPSS UV Laser" },
-    { param: "Wavelength", value: "355 nm" },
-    { param: "Laser Power", value: "3W / 5W / 10W / 15W" },
-    { param: "Marking / Work Area", value: "100×100 mm to 300×300 mm" },
+    { param: "Laser Source", value: "CO2 Glass / RF Metal Tube" },
+    { param: "Wavelength", value: "10,600 nm" },
+    { param: "Laser Power", value: "30W / 60W / 80W / 100W / 150W" },
+    { param: "Marking / Work Area", value: "300×300 mm to 1300×900 mm" },
     { param: "Marking Speed", value: "Up to 3000 mm/s" },
     { param: "Repeat Accuracy", value: "±0.01 mm" },
-    { param: "Beam Quality (M²)", value: "< 1.2" },
-    { param: "Cooling Method", value: "Air Cooling" },
+    { param: "Beam Quality (M²)", value: "< 1.3" },
+    { param: "Cooling Method", value: "Water Cooling / Air Cooling" },
     { param: "Power Supply", value: "220V / 50Hz" },
-    { param: "Software", value: "EzCad2 / LightBurn Compatible" },
-    { param: "Operating Life", value: "20,000+ hours" },
+    { param: "Software", value: "LaserCAD / LightBurn Compatible" },
+    { param: "Operating Life (RF)", value: "45,000+ hours" },
     { param: "Warranty", value: "1 Year (Extendable)" },
   ];
 
   const whyUs = [
     { title: "Pan-India Service Network", desc: "Dedicated engineers available across major Indian cities." },
     { title: "Free Installation & Training", desc: "On-site setup and operator training included with purchase." },
-    { title: "Genuine Imported Parts", desc: "Premium DPSS UV laser modules with verified authenticity." },
+    { title: "Genuine Imported Parts", desc: "High-quality RF and glass CO2 tubes with verified authenticity." },
     { title: "Fast Delivery", desc: "Ready stock available; dispatch within 3–7 business days." },
     { title: "After-Sales Support", desc: "365-day support via call, WhatsApp, and remote diagnostics." },
   ];
 
-  const faqs =[
+  const faqs = [
   {
-    q: "What is a UV Laser Marking Machine used for?",
-    a: "It is used for ultra-precise cold marking and engraving on heat-sensitive materials like glass, plastics, PCBs, and ceramics. Its short 355 nm wavelength prevents thermal damage, making it perfect for delicate substrates.",
+    q: "What is a CO2 Laser Marking Machine used for?",
+    a: "It is used to permanently engrave, mark, and cut non-metallic materials like wood, acrylic, leather, glass, paper, and textiles. It is widely utilized in the packaging, advertising, handicrafts, and garment industries.",
   },
   {
-    q: "What materials can a UV Laser mark?",
-    a: "It marks a wide range of materials, including glass, silicon wafers, PCBs, ceramics, white plastics (PVC, PP, PE), packaging, and most transparent surfaces that fiber or CO2 lasers fail to mark.",
+    q: "What materials can a CO2 Laser mark or cut?",
+    a: "It excels on organic, non-metal substrates including wood, MDF, acrylic, leather, fabrics, rubber, glass, and cardboard. It can also mark anodized or specially coated metals.",
   },
   {
-    q: "What is 'cold marking' and why does it matter?",
-    a: "Cold marking is a photochemical process where the UV laser breaks molecular bonds directly instead of using heat. This leaves a near-zero heat-affected zone, eliminating micro-cracking, charring, or warping.",
+    q: "How long does a CO2 Laser tube last?",
+    a: "Standard glass CO2 tubes last between 3,000 and 8,000 hours. Premium RF metal tubes last over 45,000 hours, provide finer beam quality, and can be refilled for long-term industrial manufacturing.",
   },
   {
-    q: "What is the price of a UV Laser Marking Machine in India?",
-    a: "Prices typically range from ₹2.5 Lakhs to ₹10 Lakhs depending on the wattage (3W–15W) and system setup. They cost more than fiber or CO2 systems due to high-end optical components. Contact us for a quote.",
+    q: "What is the price of a CO2 Laser Marking Machine in India?",
+    a: "Prices generally range from ₹80,000 to ₹5 Lakhs. The total cost is determined by laser power (30W–150W), the choice between a glass or RF tube, and the working bed size. Contact us for a custom quote.",
   },
   {
-    q: "Is UV Laser suitable for PCB and electronics marking?",
-    a: "Yes. It is the electronics industry standard for marking micro-text, barcodes, and serial codes on PCBs. The cold marking method protects circuit layers, ensuring electronic integrity is never compromised.",
+    q: "Is the CO2 Laser Machine suitable for small businesses?",
+    a: "Yes. Due to its affordability, ease of operation, and material versatility, it is a top choice for startups, small workshops, and gift shops specializing in custom engraving and signage.",
   },
   {
     q: "Do you provide installation and training?",
-    a: "Yes, IndiaLaser offers free on-site installation, precision optical alignment, and operator training with every machine to make sure your production team can run it confidently.",
+    a: "Yes, IndiaLaser offers free on-site machine setup, laser power optimization, and software training with every purchase to make sure your team runs production independently.",
   },
-]
-
+];
   const comparisonData = [
     { feature: "Best For", fiber: "Metals & hard plastics", co2: "Wood, acrylic, leather", uv: "Glass, plastic, PCB" },
     { feature: "Wavelength", fiber: "1064 nm", co2: "10,600 nm", uv: "355 nm" },
@@ -165,22 +164,22 @@ export default function UVLaserPage() {
                 {" > "}
                 <Link href="/laser-machines" className="hover:text-blue-600">Laser Marking Machines</Link>
                 {" > "}
-                <span className="text-blue-600">UV Laser Marking Machine</span>
+                <span className="text-blue-600">CO2 Laser Marking Machine</span>
               </p>
             </nav>
             <h1 className="text-2xl font-bold text-gray-900 mt-1">
-              UV Laser Marking Machine
+              CO2 Laser Marking Machine
             </h1>
             <p className="text-sm text-gray-500 mt-1">
-              Ultra-precise 355 nm cold marking on glass, PCB, plastic, ceramics & heat-sensitive materials
+              High-performance CO2 laser for engraving, cutting & marking on wood, acrylic, leather & non-metals
             </p>
           </div>
 
           {/* HERO IMAGE */}
           <div className="flex justify-center items-center w-full">
             <Image
-              src="/laser-machines/uv-laser.png"
-              alt="UV Laser Marking Machine by IndiaLaser"
+              src="/laser-machines/co2 laser machine(1).png"
+              alt="CO2 Laser Marking Machine by IndiaLaser"
               width={600}
               height={400}
               className="object-contain"
@@ -192,16 +191,16 @@ export default function UVLaserPage() {
 
             {/* ABOUT */}
             <div>
-              <h2 className="text-xl font-semibold text-gray-800">UV Laser Marking Machine</h2>
+              <h2 className="text-xl font-semibold text-gray-800">CO2 Laser Marking Machine</h2>
               <div className="w-10 h-0.5 bg-blue-600 mt-1 mb-4 rounded" />
               <p className="text-gray-600 text-sm leading-relaxed">
-                UV Laser Marking Machines are advanced precision laser systems designed for ultra-fine and high-accuracy marking applications. These machines use ultraviolet laser technology with a shorter wavelength, allowing highly detailed marking with minimal heat effect and exceptional surface protection.
+                CO2 Laser Marking Machines are high-performance laser systems specially designed for marking, engraving, and coding on non-metal and organic materials. These machines use a carbon dioxide laser beam with a wavelength of 10.6 μm to create clean, precise, and permanent markings with excellent clarity and speed.
 
-                UV laser marking is especially suitable for delicate, heat-sensitive, and high-precision materials where traditional laser systems may cause damage or burning. The machine delivers clean, sharp, and permanent markings on plastics, glass, ceramics, silicon, electronic components, medical devices, and coated materials.
+                CO2 laser technology is widely preferred for applications involving wood, acrylic, leather, rubber, paper, glass, fabric, packaging materials, plastics, and other non-metal surfaces. The laser produces smooth and detailed results without direct contact, making the process efficient, reliable, and maintenance-friendly.
 
-                These systems are ideal for micro marking, QR codes, serial numbers, logos, barcodes, date coding, and precision engraving applications requiring superior clarity and accuracy. Due to the cold marking process, UV lasers minimize thermal stress and maintain the original quality of the material surface.
+                These machines are ideal for engraving logos, serial numbers, barcodes, QR codes, product details, branding graphics, and decorative patterns. CO2 laser marking systems deliver consistent performance with high-speed operation and minimal material damage, making them suitable for both industrial production and customized applications.
 
-                UV Laser Marking Machines are widely used in industries such as electronics, semiconductor manufacturing, medical equipment, cosmetics packaging, mobile components, precision instruments, and high-end industrial applications where fine marking quality and reliability are essential.
+                CO2 Laser Marking Machines are extensively used in industries such as packaging, handicrafts, footwear, textiles, advertising, electronics, food processing, pharmaceuticals, and gift manufacturing due to their versatility, precision, and cost-effective operation.
               </p>
             </div>
 
@@ -210,26 +209,26 @@ export default function UVLaserPage() {
               <h2 className="text-xl font-semibold text-gray-800">Imported Products</h2>
               <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
               <p className="text-gray-600 text-sm leading-relaxed">
-                We offer a wide range of imported UV laser machines sourced from globally
+                We offer a wide range of imported CO2 laser machines sourced from globally
                 recognized manufacturers. These products meet international quality standards
-                and are ideal for high-resolution marking and micro-engraving on delicate materials.
-                Our imported UV machines feature premium DPSS laser modules, advanced galvo scanning
-                systems, and industry-leading beam quality — delivering consistent, repeatable results
-                across demanding production environments throughout India.
+                and are ideal for precision engraving and cutting on non-metal materials. Our
+                imported machines deliver superior beam quality, high engraving speed, and
+                outstanding durability — making them the preferred choice for businesses across
+                India.
               </p>
             </div>
 
             {/* FEATURES */}
             <div>
-              <h2 className="text-xl font-semibold text-gray-800">Features of UV Laser Machine</h2>
+              <h2 className="text-xl font-semibold text-gray-800">Features of CO2 Laser Machine</h2>
               <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
               <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2">
-                <li>355 nm short wavelength enables cold marking with near-zero heat-affected zone</li>
-                <li>Exceptional beam quality (M² &lt; 1.2) for ultra-fine spot size and micro-text marking</li>
-                <li>Ideal for transparent, translucent, and heat-sensitive substrates</li>
-                <li>High-speed galvo scanning system for fast, precise batch marking</li>
-                <li>Compatible with EzCad2 and LightBurn software for easy operation</li>
-                <li>Supports serial numbers, barcodes, QR codes, logos, and intricate patterns</li>
+                <li>Best suited for non-metal materials — wood, acrylic, leather, glass, fabric</li>
+                <li>High-speed engraving up to 3,000 mm/s for increased productivity</li>
+                <li>Precise and smooth marking output with excellent beam quality (M² &lt;1.3)</li>
+                <li>Compact design with user-friendly LaserCAD / LightBurn software</li>
+                <li>Supports engraving, cutting, and marking in a single machine</li>
+                <li>Compatible with bitmap images, vectors, text, barcodes, and QR codes</li>
                 <li>Compatible with Windows 7 / 10 / 11 operating systems</li>
               </ul>
             </div>
@@ -239,41 +238,41 @@ export default function UVLaserPage() {
               <h2 className="text-xl font-semibold text-gray-800">Advantages</h2>
               <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
               <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2">
-                <li>Cold photochemical process prevents burning, cracking, or discoloration</li>
-                <li>Finest mark resolution among all laser types — suitable for micro-scale features</li>
-                <li>Marks glass and crystal without cracking or stress fractures</li>
-                <li>Permanent, tamper-proof marks that resist chemicals, heat, and abrasion</li>
-                <li>Eco-friendly process — no inks, chemicals, or consumables required</li>
-                <li>Low maintenance with air-cooled design and no water chiller needed</li>
+                <li>Cost-effective for bulk production and high-volume engraving jobs</li>
+                <li>Non-contact process ensures zero material damage or mechanical stress</li>
+                <li>Permanent, high-contrast, and aesthetically clean marks</li>
+                <li>Low operating cost with minimal consumables required</li>
+                <li>Eco-friendly process — no ink, chemicals, or solvents needed</li>
+                <li>Versatile — handles both engraving and cutting on a wide range of materials</li>
               </ul>
             </div>
 
             {/* WORKING */}
             <div>
-              <h2 className="text-xl font-semibold text-gray-800">How a UV Laser Marking Machine Works</h2>
+              <h2 className="text-xl font-semibold text-gray-800">How a CO2 Laser Marking Machine Works</h2>
               <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
               <p className="text-gray-600 text-sm leading-relaxed">
-                A UV laser marking machine uses a solid-state diode-pumped (DPSS) laser to generate
-                a 355 nm ultraviolet beam through a process of frequency tripling from the fundamental
-                1064 nm infrared wavelength. Unlike thermal laser processes, UV light interacts with
-                material at a photochemical level — breaking molecular bonds directly rather than
-                melting or vaporizing through heat. The focused beam is steered by a high-speed galvo
-                scanning head and positioned with sub-micron accuracy, producing extremely fine, clean
-                marks on even the most delicate surfaces without any surrounding thermal damage.
+                A CO2 laser marking machine generates a laser beam by electrically exciting
+                a mixture of carbon dioxide and other gases inside a sealed tube. The resulting
+                10,600 nm infrared beam is reflected through mirrors and focused via a lens onto
+                the material surface. The concentrated heat vaporizes or ablates the top layer of
+                the material, producing a clean and permanent engraving or cut. The beam path is
+                controlled digitally via a galvo scanning system or gantry mechanism, ensuring
+                precise positioning and full repeatability across every job.
               </p>
             </div>
 
             {/* TYPES */}
             <div>
-              <h2 className="text-xl font-semibold text-gray-800">Types of UV Laser Marking Machines</h2>
+              <h2 className="text-xl font-semibold text-gray-800">Types of CO2 Laser Marking Machines</h2>
               <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
               <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2">
-                <li><strong>Desktop UV Laser Marking Machine</strong> — Compact unit for labs, R&D centers, and small-scale production</li>
-                <li><strong>Inline UV Laser Marking System</strong> — Conveyor-integrated for high-speed automated production lines</li>
-                <li><strong>Flying UV Laser Marker</strong> — On-the-fly marking for continuous packaging and bottling lines</li>
-                <li><strong>3W UV Laser Machine</strong> — Entry-level for glass, plastics, and light industrial applications</li>
-                <li><strong>5W / 10W UV Laser Machine</strong> — Higher power for PCBs, semiconductors, and ceramics</li>
-                <li><strong>15W UV Laser Machine</strong> — Industrial-grade for high-throughput electronics and medical device marking</li>
+                <li><strong>Desktop CO2 Laser Engraving Machine</strong> — Compact, ideal for small workshops, home studios, and labs</li>
+                <li><strong>CO2 Laser Cutting Machine</strong> — Large-format cutting for acrylic, wood, MDF, and fabric panels</li>
+                <li><strong>Galvo CO2 Laser Marking Machine</strong> — High-speed galvo head for fast batch marking on small parts</li>
+                <li><strong>Enclosed CO2 Laser System</strong> — Fully enclosed cabinet design for safety compliance in production lines</li>
+                <li><strong>RF CO2 Laser Machine</strong> — Metal RF tube for longer life and higher duty cycle in industrial environments</li>
+                <li><strong>Large Bed CO2 Laser Machine (1300×900 mm)</strong> — Wide-format engraving and cutting for signage and furniture</li>
               </ul>
             </div>
 
@@ -282,13 +281,13 @@ export default function UVLaserPage() {
               <h2 className="text-xl font-semibold text-gray-800">Applications</h2>
               <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
               <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2">
-                <li>PCB and electronics — serial numbers, QR codes, component traceability</li>
-                <li>Glass and crystal — bottles, awards, optical lenses, display panels</li>
-                <li>Pharmaceutical packaging — expiry dates, batch numbers on blister packs and vials</li>
-                <li>Medical devices — UDI codes, surgical instruments, implants, and catheters</li>
-                <li>White and transparent plastics — PVC, PP, PE, HDPE bottles and containers</li>
-                <li>Ceramics and sapphire — semiconductor substrates, watch faces, and tiles</li>
-                <li>Flexible circuits and FPCs — micro-scale marking without delamination</li>
+                <li>Wood and handicraft engraving — furniture, photo frames, decorative items</li>
+                <li>Acrylic cutting and marking — signage, display boards, awards</li>
+                <li>Leather industry — bags, belts, shoes, wallets, and garments</li>
+                <li>Packaging and labeling — cardboard boxes, paper bags, corrugated sheets</li>
+                <li>Advertising and signage — banners, name boards, PVC flex</li>
+                <li>Textile and fabric — jeans washing effect, pattern cutting, branding</li>
+                <li>Glass and ceramics — trophy engraving, bottle marking, tile decoration</li>
               </ul>
             </div>
           </div>
@@ -298,7 +297,7 @@ export default function UVLaserPage() {
             <h2 className="text-xl font-semibold text-gray-800">Technical Specifications</h2>
             <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
             <p className="text-sm text-gray-500 mb-4">
-              Standard specifications for our 3W–15W UV Laser Marking Machines. Custom configurations available on request.
+              Standard specifications for our 30W–150W CO2 Laser Marking Machines. Custom configurations available on request.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
@@ -323,7 +322,7 @@ export default function UVLaserPage() {
 
           {/* ── LASER TYPE COMPARISON ── */}
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800">UV vs Fiber vs CO2 Laser — Which is Right for You?</h2>
+            <h2 className="text-xl font-semibold text-gray-800">CO2 vs Fiber vs UV Laser — Which is Right for You?</h2>
             <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
             <p className="text-sm text-gray-500 mb-4">
               Understanding the differences helps you choose the best laser marking technology for your application.
@@ -334,8 +333,8 @@ export default function UVLaserPage() {
                   <tr className="bg-gray-800 text-white">
                     <th className="text-left px-4 py-2.5 rounded-tl-lg">Feature</th>
                     <th className="text-center px-4 py-2.5">Fiber Laser</th>
-                    <th className="text-center px-4 py-2.5">CO2 Laser</th>
-                    <th className="text-center px-4 py-2.5 bg-blue-600 rounded-tr-lg">UV Laser ✓</th>
+                    <th className="text-center px-4 py-2.5 bg-blue-600">CO2 Laser ✓</th>
+                    <th className="text-center px-4 py-2.5 rounded-tr-lg">UV Laser</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -343,8 +342,8 @@ export default function UVLaserPage() {
                     <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
                       <td className="px-4 py-2.5 text-gray-700 font-medium border-b border-gray-100">{row.feature}</td>
                       <td className="px-4 py-2.5 text-center text-gray-600 border-b border-gray-100">{row.fiber}</td>
-                      <td className="px-4 py-2.5 text-center text-gray-600 border-b border-gray-100">{row.co2}</td>
-                      <td className="px-4 py-2.5 text-center text-blue-700 font-semibold border-b border-gray-100 bg-blue-50">{row.uv}</td>
+                      <td className="px-4 py-2.5 text-center text-blue-700 font-semibold border-b border-gray-100 bg-blue-50">{row.co2}</td>
+                      <td className="px-4 py-2.5 text-center text-gray-600 border-b border-gray-100">{row.uv}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -373,29 +372,29 @@ export default function UVLaserPage() {
 
           {/* ── FAQ ── */}
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800">
-              Frequently Asked Questions — UV Laser Marking Machine
-            </h2>
-            <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
-            <p className="text-sm text-gray-500 mb-5">
-              Common questions about UV laser marking machines, pricing, and operation in India.
-            </p>
-
-            <div className="space-y-4">
-              {faqs.map((faq, i) => (
-                <div key={i} className="border border-gray-200 rounded-xl p-4 bg-gray-50">
-                  {/* Question */}
-                  <h3 className="text-sm font-semibold text-gray-800 mb-2">
-                    {faq.q}
-                  </h3>
-                  {/* Answer */}
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {faq.a}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+  <h2 className="text-xl font-semibold text-gray-800">
+    Frequently Asked Questions — CO2 Laser Marking Machine
+  </h2>
+  <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
+  <p className="text-sm text-gray-500 mb-5">
+    Common questions about CO2 laser marking machines, pricing, and operation in India.
+  </p>
+  
+  <div className="space-y-4">
+    {faqs.map((faq, i) => (
+      <div key={i} className="border border-gray-200 rounded-xl p-4 bg-gray-50">
+        {/* Question */}
+        <h3 className="text-sm font-semibold text-gray-800 mb-2">
+          {faq.q}
+        </h3>
+        {/* Answer */}
+        <p className="text-sm text-gray-600 leading-relaxed">
+          {faq.a}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
 
           {/* ── PACKING & DELIVERY ── */}
           <div className="bg-white rounded-2xl p-6 shadow-md">
@@ -418,18 +417,18 @@ export default function UVLaserPage() {
 
           {/* ── SEO PARAGRAPH ── */}
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800">UV Laser Marking Machine in India</h2>
+            <h2 className="text-xl font-semibold text-gray-800">CO2 Laser Marking Machine in India</h2>
             <div className="w-12 h-1 bg-blue-600 mt-1 mb-4 rounded" />
             <p className="text-gray-600 text-sm leading-relaxed">
-              Looking for a <strong>UV laser marking machine price in India</strong>? IndiaLaser offers
-              the best UV laser machines across all wattages — 3W, 5W, 10W, and 15W — suitable for
-              precision labs to large-scale electronics manufacturing. Whether you need a{" "}
-              <strong>UV laser marking machine for glass and PCB</strong>, a{" "}
-              <strong>cold laser marking machine for pharmaceutical packaging</strong>, or an{" "}
-              <strong>industrial UV laser system for medical devices and ceramics</strong>, we have the right solution.
+              Looking for a <strong>CO2 laser marking machine price in India</strong>? IndiaLaser offers
+              the best CO2 laser machines across all wattages — 30W, 60W, 80W, 100W, and 150W — suitable for
+              small workshops to large-scale production facilities. Whether you need a{" "}
+              <strong>CO2 laser engraving machine for wood and acrylic</strong>, a{" "}
+              <strong>laser cutting machine for leather and fabric</strong>, or an{" "}
+              <strong>industrial CO2 laser system for packaging and signage</strong>, we have the right solution.
               Our machines are available in <strong>Delhi, Mumbai, Chennai, Bengaluru, Hyderabad, Pune,
                 Ahmedabad</strong>, and all across India with quick delivery and dedicated after-sales support.
-              Compare our UV laser machines with Fiber and CO2 laser alternatives, or{" "}
+              Compare our CO2 laser machines with Fiber and UV laser alternatives, or{" "}
               <Link href="/contact-us" className="text-blue-600 font-semibold hover:underline">
                 contact our team
               </Link>{" "}
@@ -439,7 +438,7 @@ export default function UVLaserPage() {
 
           {/* CTA */}
           <div className="bg-gradient-to-r from-blue-900 to-blue-600 rounded-2xl p-6 text-center text-white shadow-md">
-            <h2 className="text-xl font-bold mb-2">Ready to Buy a UV Laser Marking Machine?</h2>
+            <h2 className="text-xl font-bold mb-2">Ready to Buy a CO2 Laser Marking Machine?</h2>
             <p className="text-sm text-blue-100 mb-4">
               Get the best price, free demo, and expert guidance from IndiaLaser's team.
             </p>
