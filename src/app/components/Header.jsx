@@ -279,7 +279,11 @@ export default function Navbar() {
                 <Link href="/laser-machines/laser-marking-machine/co2-laser" className="block py-2.5 pl-12 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>CO2 Laser</Link>
                 <Link href="/laser-machines/laser-marking-machine/uv-laser" className="block py-2.5 pl-12 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>UV Laser</Link>
               </div>
+<<<<<<< HEAD
               <Link href="/laser-machines/laser-soldering-machine" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Soldering Machine</Link>
+=======
+              <Link href="/laser-machines/soldering" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Soldering Machine</Link>
+>>>>>>> f819a6055219108cfbad05803ab8ab3f06a41b87
               <Link href="/laser-machines/cutting" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Cutting Machine</Link>
               <Link href="/laser-machines/welding" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Welding Machine</Link>
             </div>
