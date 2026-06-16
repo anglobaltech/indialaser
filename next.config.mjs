@@ -4,8 +4,17 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+
   async redirects() {
     return [
+      // index.html -> /
+      {
+        source: "/index.html",
+        destination: "/",
+        permanent: true,
+      },
+
+      // any-page.html -> /any-page
       {
         source: "/:path(.*).html",
         destination: "/:path",
