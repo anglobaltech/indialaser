@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-// import ReCAPTCHA from "react-google-recaptcha"; // TODO: uncomment on production
+import ReCAPTCHA from "react-google-recaptcha"; // TODO: uncomment on production
 import { collection, addDoc, serverTimestamp, getCountFromServer, setDoc, doc } from "firebase/firestore";
 import { db } from "../../../lib/firebase";
 
@@ -68,8 +68,8 @@ export default function Contact() {
     message: "",
   });
 
-  // const [captchaToken, setCaptchaToken] = useState(null);  // TODO: uncomment on production
-  // const [captchaError, setCaptchaError] = useState(false); // TODO: uncomment on production
+  const [captchaToken, setCaptchaToken] = useState(null);  // TODO: uncomment on production
+  const [captchaError, setCaptchaError] = useState(false); // TODO: uncomment on production
   const [submitted, setSubmitted] = useState(false);
   const [submittedId, setSubmittedId] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -80,11 +80,11 @@ export default function Contact() {
     setError("");
 
     // ── Captcha guard (commented out for localhost testing) ──
-    // if (!captchaToken) {          // TODO: uncomment on production
-    //   setCaptchaError(true);      // TODO: uncomment on production
-    //   return;                     // TODO: uncomment on production
-    // }                             // TODO: uncomment on production
-    // setCaptchaError(false);       // TODO: uncomment on production
+    if (!captchaToken) {          // TODO: uncomment on production
+      setCaptchaError(true);      // TODO: uncomment on production
+      return;                     // TODO: uncomment on production
+    }                             // TODO: uncomment on production
+    setCaptchaError(false);       // TODO: uncomment on production
 
     setIsSubmitting(true);
 
@@ -349,7 +349,7 @@ export default function Contact() {
 
                   {/* ── RECAPTCHA (commented out for localhost testing) ── */}
                   {/* TODO: uncomment everything below on production */}
-                  {/* <div>
+                  <div>
                     <ReCAPTCHA
                       sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                       onChange={(token) => {
@@ -366,7 +366,7 @@ export default function Contact() {
                         Please complete the captcha before submitting.
                       </p>
                     )}
-                  </div> */}
+                  </div>
 
                   {/* SUBMIT */}
                   <button
