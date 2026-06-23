@@ -4,13 +4,9 @@ export const metadata = {
   title: "Laser Cutting Machine - High-Precision CO2 & Fiber Laser Cutters in India",
   description: "Explore our advanced Laser Cutting Machines featuring CO2 and Fiber laser technology for high-speed, precise cutting of metals, acrylic, wood, and industrial materials. Ideal for sheet metal fabrication, signage, automotive parts, and architectural applications across India. Get world-class cutting solutions with IndiaLaser.",
 };
-
-
-
 export default function LaserCuttingPage() {
 
-
-  const machines = [
+ const machines = [
     {
       name: "Fiber Laser Marking Machine",
       link: "/laser-machines/laser-marking-machine/fiber-laser-marking-machine",
@@ -193,7 +189,7 @@ export default function LaserCuttingPage() {
           <div className="flex justify-center items-center w-full">
             <Image
               src="/laser-machines/laser-cutting.png"
-              alt="Laser Cutting Machine by IndiaLaser"
+              alt="Laser Cutting Machine"
               width={600}
               height={400}
               className="object-contain"

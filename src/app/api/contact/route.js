@@ -7,26 +7,26 @@ export async function POST(req) {
     const { name, email, enquiryType, message, captcha } = body;
 
     // Verify Captcha
-    const verifyRes = await fetch(
-      `https://www.google.com/recaptcha/api/siteverify`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        // Fixed: Ensure captcha variable is defined from body
-         body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captcha}`,
-      }
-    );
+    // const verifyRes = await fetch(
+    //   `https://www.google.com/recaptcha/api/siteverify`,
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/x-www-form-urlencoded",
+    //     },
+    //     // Fixed: Ensure captcha variable is defined from body
+    //      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captcha}`,
+    //   }
+    // );
 
-    const captchaData = await verifyRes.json();
+    // const captchaData = await verifyRes.json();
 
-    if (!captchaData.success) {
-      return Response.json({
-        success: false,
-        message: "Captcha verification failed",
-      });
-    }
+    // if (!captchaData.success) {
+    //   return Response.json({
+    //     success: false,
+    //     message: "Captcha verification failed",
+    //   });
+    // }
 
     // TRANSPORTER
     const transporter = nodemailer.createTransport({
@@ -43,7 +43,7 @@ export async function POST(req) {
       to: "mail@anglobalservices.com",
       subject: `New Enquiry - ${enquiryType}`,
       html: `
-        <h2>New Enquiry Received</h2>
+        <h2>New Enquiry Received From India Laser</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Type:</strong> ${enquiryType}</p>
