@@ -4,7 +4,7 @@ export async function POST(req) {
   try {
     const body = await req.json();
     // Destructure captcha from body
-    const { name, email, enquiryType, message, captcha } = body;
+    const { name, email, mobile, enquiryType, message, captcha } = body;
 
     // Verify Captcha
     const verifyRes = await fetch(
@@ -40,12 +40,13 @@ export async function POST(req) {
     // MAIL OPTIONS
     const mailOptions = {
       from: `"${name}" <${process.env.EMAIL_USER}>`,
-      to: "mail@anglobalservices.com",
+      to: "anglobalservices249@gmail.com",
       subject: `New Enquiry - ${enquiryType}`,
       html: `
         <h2>New Enquiry Received</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Mobile:</strong> ${mobile}</p>
         <p><strong>Type:</strong> ${enquiryType}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,

@@ -98,6 +98,7 @@ export default function Contact() {
     email: "",
     type: "",
     message: "",
+    mobile: "",
   });
   const [captcha, setCaptcha] = useState(null);
   const [submitted, setSubmitted] = useState(false);
@@ -118,6 +119,7 @@ export default function Contact() {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
+          mobile: form.mobile,
           enquiryType: form.type,
           message: form.message,
           captcha: captcha,
@@ -381,6 +383,11 @@ export default function Contact() {
                     </label>
                     <input
                       type="tel"
+                      required
+                      value={form.mobile}
+                      onChange={(e) =>
+                        setForm({ ...form, mobile: e.target.value })
+                      }
                       placeholder="+91 XXXXX XXXXX"
                       className="w-full border border-gray-200 bg-gray-50 focus:bg-white p-2.5 rounded-lg text-sm outline-none focus:ring-2 focus:ring-blue-400 transition"
                     />

@@ -17,7 +17,7 @@ export async function POST(req) {
 
     const mailOptions = {
       from: `"India Laser Website" <${process.env.EMAIL_USER}>`,
-      to: "mail@anglobalservices.com",
+      to: "anglobalservices249@gmail.com",
       subject: ` New Enquiry Received from India Laser Website `,
 
       html: `
