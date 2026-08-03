@@ -40,7 +40,7 @@ export async function POST(req) {
     // MAIL OPTIONS
     const mailOptions = {
       from: `"${name}" <${process.env.EMAIL_USER}>`,
-      to: "anglobalservices249@gmail.com",
+      to: "mail@anglobalservices.com",
       subject: `New Enquiry - ${enquiryType}`,
       html: `
         <h2>New Enquiry Received From India Laser</h2>
