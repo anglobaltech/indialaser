@@ -12,9 +12,9 @@ const products = [
 
   { label: "Laser Soldering Machine", href: "/laser-machines/laser-soldering-machine" },
 
-  { label: "Laser Cutting Machine", href: "/laser-machines/cutting" },
+  { label: "Laser Cutting Machine", href: "/laser-machines/laser-cutting-machine" },
 
-  { label: "Laser Welding Machine", href: "/laser-machines/welding" },
+  { label: "Laser Welding Machine", href: "/laser-machines/laser-welding-machine" },
 
 ];
 

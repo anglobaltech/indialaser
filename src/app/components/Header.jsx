@@ -13,13 +13,13 @@ export default function Navbar() {
   const products = [
     { name: "Table Top Laser Marking Machine", link: "/laser-machines/laser-marking-machine" },
     { name: "Laser Soldering Machine", link: "/laser-machines/laser-soldering-machine" },
-    { name: "Laser Cutting Machine", link: "/laser-machines/cutting" },
-    { name: "Metal Marking Laser Machine", link: "/laser-machines/Metal-marking" },
-    { name: "Gold Testing Machine", link: "/laser-machines/Gold-testing" },
+    { name: "Laser Cutting Machine", link: "/laser-machines/laser-cutting-machine" },
+    { name: "Metal Marking Laser Machine", link: "/laser-machines/laser-marking-machine" },
+    { name: "Gold Testing Machine", link: "/laser-machines/gold-testing-machine" },
     { name: "Fiber Laser Marking Machine", link: "/laser-machines/fiber-laser" },
     { name: "CO2 Laser Marking Machine", link: "/laser-machines/co2-laser" },
     { name: "UV Laser Marking Machine", link: "/laser-machines/uv-laser" },
-    { name: "Laser Welding Machine", link: "/laser-machines/welding" },
+    { name: "Laser Welding Machine", link: "/laser-machines/laser-welding-machine" },
     { name: "Universal Testing Machine I", link: "/other-products/solar-testing-equipments/universal-testing-machineI" },
     { name: "Universal Testing Machine II", link: "/other-products/solar-testing-equipments/universal-testing-machineII" },
     { name: "XRF Machine", link: "/other-products/gold-testing-equiments/xrf-machine" },
@@ -128,14 +128,14 @@ export default function Navbar() {
                       Laser Marking Machine <span className="text-[10px] text-gray-400">▶</span>
                     </Link>
                     <div className="absolute left-full top-0 min-w-[220px] bg-white border-t-2 border-[#e63946] shadow-xl rounded-b-md opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible translate-x-2 group-hover/sub:translate-x-0 transition-all duration-200">
-                      <Link href="/laser-machines/laser-marking-machine/fiber-laser" className="block px-5 py-3 font-['Inter',sans-serif] text-sm font-medium text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Fiber Laser</Link>
-                      <Link href="/laser-machines/laser-marking-machine/co2-laser" className="block px-5 py-3 font-['Inter',sans-serif] text-sm font-medium text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">CO2 Laser</Link>
-                      <Link href="/laser-machines/laser-marking-machine/uv-laser" className="block px-5 py-3 font-['Inter',sans-serif] text-sm font-medium text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">UV Laser</Link>
+                      <Link href="/laser-machines/laser-marking-machine/fiber-laser-marking-machine" className="block px-5 py-3 font-['Inter',sans-serif] text-sm font-medium text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Fiber Laser</Link>
+                      <Link href="/laser-machines/laser-marking-machine/co2-laser-marking-machine" className="block px-5 py-3 font-['Inter',sans-serif] text-sm font-medium text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">CO2 Laser</Link>
+                      <Link href="/laser-machines/laser-marking-machine/uv-laser-marking-machine" className="block px-5 py-3 font-['Inter',sans-serif] text-sm font-medium text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">UV Laser</Link>
                     </div>
                   </div>
                   <Link href="/laser-machines/laser-soldering-machine" className="block px-4 py-3 font-['Inter',sans-serif] text-sm font-medium normal-case text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Laser Soldering Machine</Link>
-                  <Link href="/laser-machines/cutting" className="block px-4 py-3 font-['Inter',sans-serif] text-sm font-medium normal-case text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Laser Cutting Machine</Link>
-                  <Link href="/laser-machines/welding" className="block px-4 py-3 font-['Inter',sans-serif] text-sm font-medium normal-case text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Laser Welding Machine</Link>
+                  <Link href="/laser-machines/laser-cutting-machine" className="block px-4 py-3 font-['Inter',sans-serif] text-sm font-medium normal-case text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Laser Cutting Machine</Link>
+                  <Link href="/laser-machines/laser-welding-machine" className="block px-4 py-3 font-['Inter',sans-serif] text-sm font-medium normal-case text-gray-700 border-b border-gray-100 last:border-none hover:bg-red-50 hover:text-[#e63946] hover:pl-6 transition-all">Laser Welding Machine</Link>
                 </div>
               </div>
 
@@ -275,13 +275,13 @@ export default function Navbar() {
                 <span className={`text-[10px] transition-transform duration-200 ${openDropdowns.laserMarking ? "rotate-180" : ""}`}>▼</span>
               </div>
               <div className={`overflow-hidden transition-all duration-300 ${openDropdowns.laserMarking ? "max-h-[500px]" : "max-h-0"}`}>
-                <Link href="/laser-machines/laser-marking-machine/fiber-laser" className="block py-2.5 pl-12 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Fiber Laser</Link>
-                <Link href="/laser-machines/laser-marking-machine/co2-laser" className="block py-2.5 pl-12 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>CO2 Laser</Link>
-                <Link href="/laser-machines/laser-marking-machine/uv-laser" className="block py-2.5 pl-12 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>UV Laser</Link>
+                <Link href="/laser-machines/laser-marking-machine/fiber-laser-marking-machine" className="block py-2.5 pl-12 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Fiber Laser</Link>
+                <Link href="/laser-machines/laser-marking-machine/co2-laser-marking-machine" className="block py-2.5 pl-12 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>CO2 Laser</Link>
+                <Link href="/laser-machines/laser-marking-machine/uv-laser-marking-machine " className="block py-2.5 pl-12 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>UV Laser</Link>
               </div>
               <Link href="/laser-machines/laser-soldering-machine" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Soldering Machine</Link>
-              <Link href="/laser-machines/cutting" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Cutting Machine</Link>
-              <Link href="/laser-machines/welding" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Welding Machine</Link>
+              <Link href="/laser-machines/laser-cutting-machine" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Cutting Machine</Link>
+              <Link href="/laser-machines/laser-welding-machine" className="block py-2.5 pl-6 text-xs text-gray-400 border-b border-white/5 hover:text-white" onClick={() => setMenuOpen(false)}>Laser Welding Machine</Link>
             </div>
           </div>
 
